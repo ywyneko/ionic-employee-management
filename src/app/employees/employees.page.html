@@ -17,7 +17,7 @@
         <ion-card *ngFor="let employee of employees; let i = index;">
           <ion-card-content>
               <span>{{i}}.{{employee.name}}</span> <b>|</b> <span>{{employee.dep_name}}</span>  <b>|</b>
-               <span>{{employee.position}}</span>  <b>|</b> <span>{{employee.salary}}</span>  <b>|</b>
+               <span>{{employee.position}}</span>  <b>|</b> <span>{{employee.salary | currency:"MMK"}}</span>   <b>|</b>
                 <span>{{employee.nrc}}</span>
                 <b>|</b> <a (click)="destroy(employee)">Delete</a>  
                 <a (click)="updateEmp(employee)">Update</a>
