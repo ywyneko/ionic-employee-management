@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>employees</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Employees</h1>
+
+  <ion-button>Filter</ion-button>
+
+  <ion-button [href]="'/create'">New</ion-button>
+
+ <ion-card *ngFor="let employee of employees; let i = index;">
+  <ion-card-content>
+    <span> {{i}}. </span>
+      <span>{{employee.name}}</span> | <span>{{employee.dep_name}}</span> |
+       <span>{{employee.position}}</span> | <span>{{employee.salary}}</span> | <span>{{employee.nrc}}</span>
+       | <a (click)="updateEmp(employee)">Update</a>  | <a (click)="destroy(employee)">Delete</a>
+  </ion-card-content>
+ </ion-card>
+</ion-content>
